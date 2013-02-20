@@ -17,8 +17,8 @@ module Tests
 	def self.test1()
 		filetree = Array.new(0) 
 		filetree.push( Docpart.new("Title",0))
+		filetree.push(Docpart.new("Lorem Ipsum Sit Dolor Amet",1))
 		filetree.each{|obj| puts obj.to_s}
-		return filetree[0]
 	end
 
 
@@ -27,7 +27,9 @@ end
 
 
 # program logic starts
-puts Tests.test1.to_s
+Tests.test1
+
+puts "Tests complete"
 gets.chomp
 
 
