@@ -1,6 +1,6 @@
 #object definition starts
 class Docpart
-	def initalize(inputAsString,typeAsInteger)
+	def Docpart.new(inputAsString,typeAsInteger)
 		@value = inputAsString
 		@type = typeAsInteger.to_i # 0 = title, 1 = text, 2 = equation (can't be done yet), 3 = table
 	end
@@ -9,22 +9,21 @@ end
 
 
 #tests start
-class Tests
-	@
-	def test1()
-		
-		filetree += new Docpart("Title",0)
+module Tests
+	def Tests.test1()
+		filetree = Array.new(0) 
+		filetree.push( Docpart.new("Title",0))
 		puts filetree
-		return filetree
+		return filetree.inspect
 	end
 
 
 end
 #tests end
 
+
 # program logic starts
-filetree += new Docpart("Title",0)
-puts filetree
+Tests.test1
 gets.chomp
 
 
